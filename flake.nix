@@ -10,11 +10,13 @@
     flake-utils,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
+      hspkgs = pkgs.haskellPackages;
       pkgs = nixpkgs.legacyPackages.${system};
       fhsEnv =
         (pkgs.buildFHSUserEnv rec {
           name = "nebokrai";
-          targetPkgs = pkgs: (with pkgs.haskellPackages; [
+          targetPkgs = pkgs: (with hspkgs; [
+            pkgs.ghc
             cabal-install
             haskell-language-server
             hlint
@@ -30,5 +32,16 @@
           '';
         })
         .env;
-    in {devShells.default = fhsEnv;});
+
+      shell = hspkgs.shellFor {
+        packages = ps: []; #ps.haskell-language-server];
+        buildInputs = with hspkgs; [cabal-install];
+        withHoogle = true;
+      };
+    in {
+      devShells = {
+        default = shell;
+        fhs = fhsEnv;
+      };
+    });
 }
