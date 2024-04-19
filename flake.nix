@@ -35,7 +35,7 @@
 
       shell = hspkgs.shellFor {
         packages = ps: []; #ps.haskell-language-server];
-        buildInputs = with hspkgs; [cabal-install];
+        buildInputs = with hspkgs; [cabal-install brick optparse-applicative aeson aeson-schemas];
         withHoogle = true;
       };
     in {
