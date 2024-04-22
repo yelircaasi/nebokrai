@@ -1,7 +1,8 @@
 module Nebokrai.Entities.Declaration (Declaration(..)) where
 
 data Declaration = Declaration
-    { priority :: Int
-    , duration :: Int
-    , name :: String
+    { config :: Config
+    , roadmaps :: Roadmaps
+    , calendar :: Calendar
+    , routines :: [Routine]
     } deriving (Show)

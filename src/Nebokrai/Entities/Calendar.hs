@@ -1,7 +1,11 @@
 module Nebokrai.Entities.Calendar (Calendar(..)) where
 
+import Data.Time (Day, DayOfWeek, TimeOfDay, LocalTime)
+
 data Calendar = Calendar
-    { priority :: Int
-    , duration :: Int
-    , name :: String
+    { name :: String
+    , earliestDate :: Day
+    , latestDate :: Day
+    , days :: [CalendarDay]
+    
     } deriving (Show)

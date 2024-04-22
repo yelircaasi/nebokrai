@@ -13,9 +13,10 @@ import qualified Nebokrai ( testFunc
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
+
+  Nebokrai.cli
+  -- putStrLn "Hello, Haskell!"
   -- Nebokrai.testFunc
-  -- Nebokrai.cli
   -- Nebokrai.tui
   -- Nebokrai.readData
   -- Nebokrai.writeData
