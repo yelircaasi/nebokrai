@@ -24,7 +24,7 @@ writeData :: IO ()
 writeData = putStrLn "writeData goes here"
 
 cli :: IO ()
-cli = Nebokrai.CLI.main 
+cli = Nebokrai.CLI.main
 
 tui :: IO ()
 tui = putStrLn "tui goes here"
