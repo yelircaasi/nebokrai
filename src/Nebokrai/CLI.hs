@@ -4,6 +4,14 @@ module Nebokrai.CLI (main) where
 -- import Options.Applicative (execParser, fullDesc, progDesc, Parser, subparser, command, <*>, <$>, <**>, header)
 import Options.Applicative ((<*>), (<$>), Parser, execParser, info, fullDesc, progDesc, header, helper, switch, strOption, command, subparser, progDesc, info, long, short, metavar, value, help, (<**>))
 
+--TODO: deep dive on operators <>, <*>, <$>, <**> and the Parser type
+-- (<>)    :: 
+-- (<*>)   :: 
+-- (<$>)   :: 
+-- (<**>)  :: 
+-- Parser  :: 
+
+
 data NebokraiSubcommand
     = Derive
     | Validate
