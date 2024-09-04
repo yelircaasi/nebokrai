@@ -10,7 +10,7 @@ data Entry = Entry
     , validSubentryTags :: [String]
     , validParentTags   :: [String]
     , isFixed           :: Boolean
-    --, isEndAligned      :: Boolean
+    -- , isEndAligned      :: Boolean
     , order             :: UnitIntClosed
     , minLength         :: TimeInt
     , normalLength      :: TimeInt
