@@ -2,7 +2,7 @@
   description = "FHS environment that allows me to use Haskell on NixOS without Nix-specific solutions.";
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:nixos/nixpkgs/908514a0885f889432825e9ac71842ca444e8bd5";
+    nixpkgs.url = "github:nixos/nixpkgs/c57a028c30068aa2a7e00fa87300804dab748ff5";  # updated 2026-10-27
   };
   outputs = {
     self,
